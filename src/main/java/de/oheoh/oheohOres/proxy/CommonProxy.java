@@ -34,21 +34,21 @@ public class CommonProxy {
         registerItems(event, OoArmor.oheriumChest);
         registerItems(event, OoArmor.oheriumLegs);
         registerItems(event, OoArmor.oheriumBoots);
-        oheohOres.LOGGER.info("Registering Ore Generator...");
+        oheohOres.LOGGER.debug("Registering Ore Generator...");
         GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);
-        oheohOres.LOGGER.info("\tRegistered!");
+        oheohOres.LOGGER.debug("\tRegistered!");
     }
 
     public void init(FMLInitializationEvent event) {
     }
 
     public void postInit(FMLPostInitializationEvent event) {
-        oheohOres.LOGGER.info("Registering crafting recipes...");
+        oheohOres.LOGGER.debug("Registering crafting recipes...");
         CraftingHandler.init();
-        oheohOres.LOGGER.info("\tRegistered!");
-        oheohOres.LOGGER.info("Registering smelting recipes...");
+        oheohOres.LOGGER.debug("\tRegistered!");
+        oheohOres.LOGGER.debug("Registering smelting recipes...");
         SmeltingHandler.init();
-        oheohOres.LOGGER.info("\tRegistered!");
+        oheohOres.LOGGER.debug("\tRegistered!");
     }
 
     public void serverStarting(FMLServerStartingEvent event) {

@@ -19,19 +19,19 @@ public class oheohOres {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         LOGGER.info("Guten Tag Minecraft!");
-        LOGGER.info("Starting Pre-Initialization...");
+        LOGGER.debug("Starting Pre-Initialization...");
         proxy.preInit(event);
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-        LOGGER.info("Starting Initialization...");
+        LOGGER.debug("Starting Initialization...");
         proxy.init(event);
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-        LOGGER.info("Starting Post-Initialization...");
+        LOGGER.debug("Starting Post-Initialization...");
         proxy.postInit(event);
     }
 

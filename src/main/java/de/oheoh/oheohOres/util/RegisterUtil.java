@@ -19,29 +19,29 @@ public class RegisterUtil {
     }
 
     public static void registerBlocks(FMLPreInitializationEvent event, Block... blocks) {
-        oheohOres.LOGGER.info("Registering blocks: ");
+        oheohOres.LOGGER.debug("Registering blocks: ");
         for (Block block : blocks) {
-            oheohOres.LOGGER.info("\tRegistering " + block.getUnlocalizedName().substring(5));
+            oheohOres.LOGGER.debug("\tRegistering " + block.getUnlocalizedName().substring(5));
             final ItemBlock itemblock = new ItemBlock(block);
             if (event.getSide() == Side.CLIENT) {
                 GameRegistry.register(block);
                 GameRegistry.register(itemblock, block.getRegistryName());
-                oheohOres.LOGGER.info("\t\tRegistered!");
+                oheohOres.LOGGER.debug("\t\tRegistered!");
                 ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
-                oheohOres.LOGGER.info("\t\tModel Registered!");
+                oheohOres.LOGGER.debug("\t\tModel Registered!");
             }
         }
     }
 
     public static void registerItems(FMLPreInitializationEvent event, Item... items) {
-        oheohOres.LOGGER.info("Registering Items: ");
+        oheohOres.LOGGER.debug("Registering Items: ");
         for (Item item : items) {
-            oheohOres.LOGGER.info("\tRegistering " + item.getUnlocalizedName().substring(5));
+            oheohOres.LOGGER.debug("\tRegistering " + item.getUnlocalizedName().substring(5));
             if (event.getSide() == Side.CLIENT) {
                 GameRegistry.register(item);
-                oheohOres.LOGGER.info("\t\tRegistered!");
+                oheohOres.LOGGER.debug("\t\tRegistered!");
                 ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-                oheohOres.LOGGER.info("\t\tModel Registered!");
+                oheohOres.LOGGER.debug("\t\tModel Registered!");
             }
         }
     }
