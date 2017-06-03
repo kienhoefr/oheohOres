@@ -6,7 +6,9 @@ import de.oheoh.oheohOres.init.OoArmor;
 import de.oheoh.oheohOres.init.OoBlocks;
 import de.oheoh.oheohOres.init.OoItems;
 import de.oheoh.oheohOres.oheohOres;
+import de.oheoh.oheohOres.world.WorldGenOre;
 import net.minecraftforge.fml.common.event.*;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import static de.oheoh.oheohOres.util.RegisterUtil.registerBlocks;
 import static de.oheoh.oheohOres.util.RegisterUtil.registerItems;
@@ -32,6 +34,9 @@ public class CommonProxy {
         registerItems(event, OoArmor.oheriumChest);
         registerItems(event, OoArmor.oheriumLegs);
         registerItems(event, OoArmor.oheriumBoots);
+        oheohOres.LOGGER.info("Registering Ore Generator...");
+        GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);
+        oheohOres.LOGGER.info("\tRegistered!");
     }
 
     public void init(FMLInitializationEvent event) {

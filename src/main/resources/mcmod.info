@@ -3,8 +3,8 @@
     "modid": "oheohores",
     "name": "oheoh's Ores",
     "description": "This mod adds some ores, ingots, tools, etc.",
-    "version": "1.0.0",
-    "mcversion": "1.11.2",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
     "url": "https://minecraft.curseforge.com/projects/oheohs-ores",
     "authorList": [
       "oheoh"

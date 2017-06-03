@@ -18,7 +18,6 @@ public class CraftingHandler {
         GameRegistry.addShapelessRecipe(new ItemStack(OoItems.oheriumIngot), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget));
         GameRegistry.addShapelessRecipe(new ItemStack(OoItems.oheriumShard), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget));
         GameRegistry.addShapelessRecipe(new ItemStack(OoItems.oheriumNugget, 4), new ItemStack(OoItems.oheriumShard));
-        GameRegistry.addShapelessRecipe(new ItemStack(OoItems.oheriumDust, 2), new ItemStack(Items.REDSTONE), new ItemStack(Items.DYE, 1, 4));
         GameRegistry.addRecipe(new ItemStack(OoItems.oheriumComponent), " S ", "SIS", " S ", 'S', OoItems.oheriumShard, 'I', OoItems.oheriumIngot);
         GameRegistry.addRecipe(new ItemStack(OoItems.oheriumPickaxe), "CCC", " S ", " S ", 'C', OoItems.oheriumComponent, 'S', Items.STICK);
         GameRegistry.addRecipe(new ItemStack(OoItems.oheriumSword), " C ", " C ", " S ", 'C', OoItems.oheriumComponent, 'S', Items.STICK);
