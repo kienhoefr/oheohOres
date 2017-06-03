@@ -1,0 +1,15 @@
+tile.oherium_ore.name=Oherium Ore
+tile.oherium_block.name=Oherium Block
+item.oherium_ingot.name=Oherium Ingot
+item.oherium_dust.name=Oherium Dust
+item.oherium_sword.name=Oherium Sword
+item.oherium_pickaxe.name=Oherium Pickaxe
+item.oherium_axe.name=Oherium Axe
+item.oherium_shovel.name=Oherium Shovel
+item.oherium_hoe.name=Oherium Hoe
+item.dusty_oherium_ingot.name=Dusty Oherium Ingot
+item.burned_dusty_oherium_ingot.name=Burned Dusty Oherium Ingot
+itemGroup.oheohOresBlocks=oheoh's Ores Blocks
+itemGroup.oheohOresItems=oheoh's Ores Items
+itemGroup.oheohOresTools=oheoh's Ores Tools
+itemGroup.oheohOresCombat=oheoh's Ores Combat

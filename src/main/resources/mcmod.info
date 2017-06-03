@@ -1,0 +1,14 @@
+[
+  {
+    "modid": "oheohores",
+    "name": "oheoh's Ores",
+    "description": "This mod adds some ores, ingots, tools, etc.",
+    "version": "1.0",
+    "mcversion": "1.11.2",
+    "url": "oheoh.de/oheohOres",
+    "authorList": [
+      "oheoh"
+    ],
+    "credits": "A big \"thankyou\" to the Minecraft Forge Team for making modding eZ AF"
+  }
+]
