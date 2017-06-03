@@ -1,5 +1,6 @@
 package de.oheoh.oheohOres.handlers;
 
+import de.oheoh.oheohOres.init.OoArmor;
 import de.oheoh.oheohOres.init.OoBlocks;
 import de.oheoh.oheohOres.init.OoItems;
 import net.minecraft.init.Items;
@@ -16,6 +17,8 @@ public class CraftingHandler {
         GameRegistry.addShapelessRecipe(new ItemStack(OoItems.oheriumNugget, 9), new ItemStack(OoItems.oheriumIngot));
         GameRegistry.addShapelessRecipe(new ItemStack(OoItems.oheriumIngot), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget));
         GameRegistry.addShapelessRecipe(new ItemStack(OoItems.oheriumShard), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget), new ItemStack(OoItems.oheriumNugget));
+        GameRegistry.addShapelessRecipe(new ItemStack(OoItems.oheriumNugget, 4), new ItemStack(OoItems.oheriumShard));
+        GameRegistry.addShapelessRecipe(new ItemStack(OoItems.oheriumDust, 2), new ItemStack(Items.REDSTONE), new ItemStack(Items.DYE, 1, 4));
         GameRegistry.addRecipe(new ItemStack(OoItems.oheriumComponent), " S ", "SIS", " S ", 'S', OoItems.oheriumShard, 'I', OoItems.oheriumIngot);
         GameRegistry.addRecipe(new ItemStack(OoItems.oheriumPickaxe), "CCC", " S ", " S ", 'C', OoItems.oheriumComponent, 'S', Items.STICK);
         GameRegistry.addRecipe(new ItemStack(OoItems.oheriumSword), " C ", " C ", " S ", 'C', OoItems.oheriumComponent, 'S', Items.STICK);
@@ -24,6 +27,12 @@ public class CraftingHandler {
         GameRegistry.addRecipe(new ItemStack(OoItems.oheriumShovel), " C ", " S ", " S ", 'C', OoItems.oheriumComponent, 'S', Items.STICK);
         GameRegistry.addRecipe(new ItemStack(OoItems.oheriumHoe), " CC", " S ", " S ", 'C', OoItems.oheriumComponent, 'S', Items.STICK);
         GameRegistry.addRecipe(new ItemStack(OoItems.oheriumHoe), "CC ", " S ", " S ", 'C', OoItems.oheriumComponent, 'S', Items.STICK);
+        GameRegistry.addRecipe(new ItemStack(OoArmor.oheriumHelmet), "CCC", "C C", "   ", 'C', OoItems.oheriumComponent);
+        GameRegistry.addRecipe(new ItemStack(OoArmor.oheriumHelmet), "   ", "CCC", "C C", 'C', OoItems.oheriumComponent);
+        GameRegistry.addRecipe(new ItemStack(OoArmor.oheriumChest), "C C", "CCC", "CCC", 'C', OoItems.oheriumComponent);
+        GameRegistry.addRecipe(new ItemStack(OoArmor.oheriumLegs), "CCC", "C C", "C C", 'C', OoItems.oheriumComponent);
+        GameRegistry.addRecipe(new ItemStack(OoArmor.oheriumBoots), "   ", "C C", "C C", 'C', OoItems.oheriumComponent);
+        GameRegistry.addRecipe(new ItemStack(OoArmor.oheriumBoots), "C C", "C C", "   ", 'C', OoItems.oheriumComponent);
     }
 
 
