@@ -15,7 +15,7 @@ gradle-app.setting
 
 # Ingore IntelliJ project files
 .idea
-.iml
+*.iml
 
 #Ignore Run and Out directory
 /run/
