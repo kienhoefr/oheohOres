@@ -6,9 +6,10 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
 /**
- * Created by oheoh on 01.06.2017 18:13 Uhr for oheohOres.
+ * File created by oheoh on 01.06.2017 18:13 Uhr for oheohOres.
  */
 public class CreativeTabsHandler {
+    //Oherium tabs
     public static final CreativeTabs oheohOresBlocks = new CreativeTabs("oheohOresBlocks") {
         @Override
         public ItemStack getTabIconItem() {

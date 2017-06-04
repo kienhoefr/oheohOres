@@ -14,26 +14,41 @@ import static de.oheoh.oheohOres.util.RegisterUtil.registerBlocks;
 import static de.oheoh.oheohOres.util.RegisterUtil.registerItems;
 
 /**
- * Created by oheoh on 30.05.2017 18:14 Uhr for oheohOres.
+ * File created by oheoh on 30.05.2017 18:14 Uhr for oheohOres.
  */
 public class CommonProxy {
     public void preInit(FMLPreInitializationEvent event) {
+        //Blocks
         registerBlocks(event, OoBlocks.oheriumBlock);
         registerBlocks(event, OoBlocks.oheriumOre);
+
+        //Crafting components
         registerItems(event, OoItems.oheriumIngot);
         registerItems(event, OoItems.oheriumDust);
+        registerItems(event, OoItems.oheriumNugget);
+        registerItems(event, OoItems.oheriumShard);
+        registerItems(event, OoItems.oheriumComponent);
+
+        //Tools
         registerItems(event, OoItems.oheriumAxe);
         registerItems(event, OoItems.oheriumHoe);
         registerItems(event, OoItems.oheriumPickaxe);
         registerItems(event, OoItems.oheriumShovel);
         registerItems(event, OoItems.oheriumSword);
-        registerItems(event, OoItems.oheriumNugget);
-        registerItems(event, OoItems.oheriumShard);
-        registerItems(event, OoItems.oheriumComponent);
+
+        //Armor
         registerItems(event, OoArmor.oheriumHelmet);
         registerItems(event, OoArmor.oheriumChest);
         registerItems(event, OoArmor.oheriumLegs);
         registerItems(event, OoArmor.oheriumBoots);
+
+        //Armor Enhanced
+        registerItems(event, OoArmor.oheriumHelmetEnhanced);
+        registerItems(event, OoArmor.oheriumChestEnhanced);
+        registerItems(event, OoArmor.oheriumLegsEnhanced);
+        registerItems(event, OoArmor.oheriumBootsEnhanced);
+
+        //OreGen
         oheohOres.LOGGER.debug("Registering Ore Generator...");
         GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);
         oheohOres.LOGGER.debug("\tRegistered!");
