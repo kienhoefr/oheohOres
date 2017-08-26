@@ -1,4 +1,8 @@
-package de.oheoh.oheohOres.items;
+package de.oheoh.oheohOres.blocks;
+
+import de.oheoh.oheohOres.handlers.CreativeTabsHandler;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 
 /***************************************************************************************************
  * Copyright (c) 2017 oheoh
@@ -9,13 +13,14 @@ package de.oheoh.oheohOres.items;
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  **************************************************************************************************/
 
-import net.minecraft.creativetab.CreativeTabs;
-
-/**
- * Created by oheoh on 30.05.2017 19:21 Uhr for oheohOres 16:40 Uhr for oheohOres.
- */
-public class ItemOheriumNugget extends ItemBase {
-    public ItemOheriumNugget(String name, CreativeTabs tab) {
-        super(name, tab);
+public class OheriumBlock extends Block {
+    public OheriumBlock() {
+        super(Material.IRON);
+        setUnlocalizedName("ohrium_block");
+        setRegistryName("oherium_block");
+        setHardness(6F);
+        setResistance(35F);
+        setCreativeTab(CreativeTabsHandler.oheohOresBlocks);
+        setHarvestLevel("pickaxe", 2);
     }
 }

@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "X",
+    "X",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "oheohores:oherium_component"
+    }
+  },
+  "result": {
+    "item": "oheohores:oherium_sword"
+  }
+}

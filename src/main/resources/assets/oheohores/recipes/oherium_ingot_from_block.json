@@ -1,0 +1,16 @@
+{
+  "type": "crafting_shaped",
+  "group": "oheohores:oherium_ingot",
+  "pattern": [
+    "B"
+  ],
+  "key": {
+    "B": {
+      "item": "oheohores:oherium_block"
+    }
+  },
+  "result": {
+    "item": "oheohores:oherium_ingot",
+    "count": 9
+  }
+}

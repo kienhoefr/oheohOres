@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "oheohores:oherium_component"
+    }
+  },
+  "result": {
+    "item": "oheohores:oherium_boots"
+  }
+}

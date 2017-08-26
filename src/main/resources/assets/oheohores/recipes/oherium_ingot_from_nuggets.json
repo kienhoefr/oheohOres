@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shaped",
+  "group": "iron_ingot",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "oheohores:oherium_nugget"
+    }
+  },
+  "result": {
+    "item": "oheohores:oherium_ingot"
+  }
+}

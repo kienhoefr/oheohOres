@@ -1,0 +1,16 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "oheohores:oherium_ingot"
+    }
+  },
+  "result": {
+    "item": "oheohores:oherium_block"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "oheohores:oherium_component"
+      }
+    ]
+  },
+  "key": {
+    "X": [
+      {
+        "item": "oheohores:oherium_helmet"
+      }
+    ]
+  },
+  "result": {
+    "item": "oheohores:oherium_helmet_enhanced"
+  }
+}
