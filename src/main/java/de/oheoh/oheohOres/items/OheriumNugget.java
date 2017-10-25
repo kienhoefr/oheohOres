@@ -16,12 +16,13 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class OheriumDust extends Item {
-    public OheriumDust() {
-        setUnlocalizedName("oherium_dust");
-        setRegistryName("oherium_dust");
+public class OheriumNugget extends Item {
+    public OheriumNugget() {
+        setUnlocalizedName("oherium_nugget");
+        setRegistryName("oherium_nugget");
         setCreativeTab(CreativeTabsHandler.oheohOresItems);
         setMaxStackSize(64);
+
     }
 
     @SideOnly(Side.CLIENT)

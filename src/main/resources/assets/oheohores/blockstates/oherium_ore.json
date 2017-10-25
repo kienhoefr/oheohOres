@@ -1,4 +1,8 @@
 {
+  "forge_marker": 1,
+  "defaults": {
+    "model": "oheohores:oherium_ore"
+  },
   "variants": {
     "normal": {
       "model": "oheohores:oherium_ore"

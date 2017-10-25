@@ -9,18 +9,26 @@ package de.oheoh.oheohOres.items;
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  **************************************************************************************************/
 
-import net.minecraft.creativetab.CreativeTabs;
+import de.oheoh.oheohOres.handlers.CreativeTabsHandler;
+import de.oheoh.oheohOres.handlers.MaterialHandler;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
-/**
- * Created by oheoh on 03.06.2017 16:03 Uhr for oheohOres 16:40 Uhr for oheohOres.
- */
-public class ItemOheriumArmor extends ItemArmor {
-    public ItemOheriumArmor(String name, CreativeTabs tab, ItemArmor.ArmorMaterial mat, int layerIndex, EntityEquipmentSlot slot) {
-        super(mat, layerIndex, slot);
-        setUnlocalizedName(name);
-        setRegistryName(name);
-        setCreativeTab(tab);
+public class OheriumLeggingsEnhanced extends ItemArmor {
+    public OheriumLeggingsEnhanced() {
+        super(MaterialHandler.OHERIUM_ENH, 1, EntityEquipmentSlot.LEGS);
+        setUnlocalizedName("oherium_leggings_enhanced");
+        setRegistryName("oherium_leggings_enhanced");
+        setCreativeTab(CreativeTabsHandler.oheohOresCombat);
+
+    }
+
+    @SideOnly(Side.CLIENT)
+    public void initModel() {
+        ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
     }
 }

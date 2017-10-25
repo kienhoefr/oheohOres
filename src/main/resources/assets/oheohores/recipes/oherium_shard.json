@@ -1,10 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "oheohores:oherium_ingot",
   "pattern": [
-    "###",
-    "###",
-    "###"
+    "##",
+    "##"
   ],
   "key": {
     "#": {
@@ -12,6 +10,6 @@
     }
   },
   "result": {
-    "item": "oheohores:oherium_ingot"
+    "item": "oheohores:oherium_shard"
   }
 }

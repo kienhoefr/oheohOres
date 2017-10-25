@@ -9,34 +9,22 @@ package de.oheoh.oheohOres.proxy;
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  **************************************************************************************************/
 
-import net.minecraftforge.fml.common.event.*;
+import de.oheoh.oheohOres.init.OoBlocks;
+import de.oheoh.oheohOres.init.OoItems;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.relauncher.Side;
 
 /**
  * Created by oheoh on 30.05.2017 18:14 Uhr for oheohOres 16:40 Uhr for oheohOres.
  */
+@Mod.EventBusSubscriber(Side.CLIENT)
 public class ClientProxy extends CommonProxy {
-    @Override
-    public void preInit(FMLPreInitializationEvent event) {
-        super.preInit(event);
-    }
 
-    @Override
-    public void init(FMLInitializationEvent event) {
-        super.init(event);
-    }
-
-    @Override
-    public void postInit(FMLPostInitializationEvent event) {
-        super.postInit(event);
-    }
-
-    @Override
-    public void serverStarting(FMLServerStartingEvent event) {
-        super.serverStarting(event);
-    }
-
-    @Override
-    public void serverStopping(FMLServerStoppingEvent event) {
-        super.serverStopping(event);
+    @SubscribeEvent
+    public static void registerModels(ModelRegistryEvent event) {
+        OoBlocks.initModels();
+        OoItems.initModels();
     }
 }

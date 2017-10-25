@@ -12,6 +12,8 @@ package de.oheoh.oheohOres.init;
 import de.oheoh.oheohOres.blocks.OheriumBlock;
 import de.oheoh.oheohOres.blocks.OheriumOre;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
  * File created by oheoh on 30.05.2017 19:01 Uhr for oheohOres.
@@ -19,8 +21,14 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class OoBlocks {
     //Oherium blocks
     @GameRegistry.ObjectHolder("oheohores:oherium_block")
-    public static final OheriumBlock oheriumBlock;
+    public static OheriumBlock oheriumBlock;
 
     @GameRegistry.ObjectHolder("oheohores:oherium_ore")
-    public static final OheriumOre oheriumOre;
+    public static OheriumOre oheriumOre;
+
+    @SideOnly(Side.CLIENT)
+    public static void initModels() {
+        oheriumOre.initModel();
+        oheriumBlock.initModel();
+    }
 }

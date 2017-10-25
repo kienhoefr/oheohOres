@@ -10,18 +10,19 @@ package de.oheoh.oheohOres.items;
  **************************************************************************************************/
 
 import de.oheoh.oheohOres.handlers.CreativeTabsHandler;
+import de.oheoh.oheohOres.handlers.MaterialHandler;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemSpade;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class OheriumDust extends Item {
-    public OheriumDust() {
-        setUnlocalizedName("oherium_dust");
-        setRegistryName("oherium_dust");
-        setCreativeTab(CreativeTabsHandler.oheohOresItems);
-        setMaxStackSize(64);
+public class OheriumShovel extends ItemSpade {
+    public OheriumShovel() {
+        super(MaterialHandler.OHERIUM);
+        setUnlocalizedName("oherium_shovel");
+        setRegistryName("oherium_shovel");
+        setCreativeTab(CreativeTabsHandler.oheohOresTools);
     }
 
     @SideOnly(Side.CLIENT)

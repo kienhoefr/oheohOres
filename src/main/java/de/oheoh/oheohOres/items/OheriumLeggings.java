@@ -10,18 +10,21 @@ package de.oheoh.oheohOres.items;
  **************************************************************************************************/
 
 import de.oheoh.oheohOres.handlers.CreativeTabsHandler;
+import de.oheoh.oheohOres.handlers.MaterialHandler;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.item.Item;
+import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.ItemArmor;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class OheriumDust extends Item {
-    public OheriumDust() {
-        setUnlocalizedName("oherium_dust");
-        setRegistryName("oherium_dust");
-        setCreativeTab(CreativeTabsHandler.oheohOresItems);
-        setMaxStackSize(64);
+public class OheriumLeggings extends ItemArmor {
+    public OheriumLeggings() {
+        super(MaterialHandler.OHERIUM_ARMOR, 1, EntityEquipmentSlot.LEGS);
+        setUnlocalizedName("oherium_leggings");
+        setRegistryName("oherium_leggings");
+        setCreativeTab(CreativeTabsHandler.oheohOresCombat);
+
     }
 
     @SideOnly(Side.CLIENT)

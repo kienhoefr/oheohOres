@@ -1,0 +1,36 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "oheohores:oherium_nugget",
+      "oheohores:oherium_ingot_from_nuggets"
+    ]
+  },
+  "criteria": {
+    "has_at_least_9_oherium_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "oheohores:oherium_nugget",
+            "count": {
+              "min": 9
+            }
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "oheohores:oherium_ingot_from_nuggets"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_at_least_9_oherium_nugget",
+      "has_the_recipe"
+    ]
+  ]
+}

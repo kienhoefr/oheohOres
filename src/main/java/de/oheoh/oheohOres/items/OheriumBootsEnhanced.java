@@ -9,13 +9,26 @@ package de.oheoh.oheohOres.items;
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  **************************************************************************************************/
 
-import net.minecraft.creativetab.CreativeTabs;
+import de.oheoh.oheohOres.handlers.CreativeTabsHandler;
+import de.oheoh.oheohOres.handlers.MaterialHandler;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.ItemArmor;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
-/**
- * Created by oheoh on 30.05.2017 19:21 Uhr for oheohOres 16:40 Uhr for oheohOres.
- */
-public class ItemOheriumIngot extends ItemBase {
-    public ItemOheriumIngot(String name, CreativeTabs tab) {
-        super(name, tab);
+public class OheriumBootsEnhanced extends ItemArmor {
+    public OheriumBootsEnhanced() {
+        super(MaterialHandler.OHERIUM_ENH, 0, EntityEquipmentSlot.FEET);
+        setUnlocalizedName("oherium_boots_enhanced");
+        setRegistryName("oherium_boots_enhanced");
+        setCreativeTab(CreativeTabsHandler.oheohOresCombat);
+
+    }
+
+    @SideOnly(Side.CLIENT)
+    public void initModel() {
+        ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
     }
 }

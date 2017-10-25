@@ -9,13 +9,29 @@ package de.oheoh.oheohOres.items;
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  **************************************************************************************************/
 
-import net.minecraft.creativetab.CreativeTabs;
+import de.oheoh.oheohOres.handlers.CreativeTabsHandler;
+import de.oheoh.oheohOres.handlers.MaterialHandler;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemAxe;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
-/**
- * Created by oheoh on 30.05.2017 19:21 Uhr for oheohOres 16:40 Uhr for oheohOres.
- */
-public class ItemOheriumShard extends ItemBase {
-    public ItemOheriumShard(String name, CreativeTabs tab) {
-        super(name, tab);
+public class OheriumAxe extends ItemAxe {
+
+    private static final Item.ToolMaterial material = MaterialHandler.OHERIUM;
+
+    public OheriumAxe() {
+        super(material, material.getDamageVsEntity(), material.getEfficiencyOnProperMaterial());
+        setUnlocalizedName("oherium_axe");
+        setRegistryName("oherium_axe");
+        setCreativeTab(CreativeTabsHandler.oheohOresTools);
+
+    }
+
+    @SideOnly(Side.CLIENT)
+    public void initModel() {
+        ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
     }
 }

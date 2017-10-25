@@ -18,5 +18,5 @@ public class Ref {
     public static final String VERSION = "1.3.0";
     public static final String COMMON_PROXY = "de.oheoh.oheohOres.proxy.CommonProxy";
     public static final String CLIENT_PROXY = "de.oheoh.oheohOres.proxy.ClientProxy";
-    public static final String DEPS = "after:minecraft@[1.12, 1.12.1,);";
+    public static final String DEPS = "after:minecraft@[1.12,);";
 }

@@ -1,5 +1,5 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
     "###",
     "#X#",
@@ -10,9 +10,7 @@
       {
         "item": "oheohores:oherium_component"
       }
-    ]
-  },
-  "key": {
+    ],
     "X": [
       {
         "item": "oheohores:oherium_helmet"

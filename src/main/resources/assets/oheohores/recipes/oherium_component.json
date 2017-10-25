@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "SIS",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "oheohores:oherium_shard"
+    },
+    "I": {
+      "item": "oheohores:oherium_ingot"
+    }
+  },
+  "result": {
+    "item": "oheohores:oherium_component"
+  }
+}

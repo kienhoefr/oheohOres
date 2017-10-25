@@ -11,9 +11,10 @@ package de.oheoh.oheohOres.proxy;
 
 
 import de.oheoh.oheohOres.blocks.OheriumBlock;
+import de.oheoh.oheohOres.blocks.OheriumOre;
 import de.oheoh.oheohOres.handlers.SmeltingHandler;
 import de.oheoh.oheohOres.init.OoBlocks;
-import de.oheoh.oheohOres.items.OheriumDust;
+import de.oheoh.oheohOres.items.*;
 import de.oheoh.oheohOres.oheohOres;
 import de.oheoh.oheohOres.world.WorldGenOre;
 import net.minecraft.block.Block;
@@ -55,11 +56,30 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         event.getRegistry().register(new OheriumBlock());
+        event.getRegistry().register(new OheriumOre());
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().register(new ItemBlock(OoBlocks.oheriumBlock).setRegistryName(OoBlocks.oheriumBlock.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(OoBlocks.oheriumOre).setRegistryName(OoBlocks.oheriumOre.getRegistryName()));
         event.getRegistry().register(new OheriumDust());
+        event.getRegistry().register(new OheriumIngot());
+        event.getRegistry().register(new OheriumNugget());
+        event.getRegistry().register(new OheriumShard());
+        event.getRegistry().register(new OheriumComponent());
+        event.getRegistry().register(new OheriumHelmet());
+        event.getRegistry().register(new OheriumChestplate());
+        event.getRegistry().register(new OheriumLeggings());
+        event.getRegistry().register(new OheriumBoots());
+        event.getRegistry().register(new OheriumHelmetEnhanced());
+        event.getRegistry().register(new OheriumChestplateEnhanced());
+        event.getRegistry().register(new OheriumLeggingsEnhanced());
+        event.getRegistry().register(new OheriumBootsEnhanced());
+        event.getRegistry().register(new OheriumSword());
+        event.getRegistry().register(new OheriumPickaxe());
+        event.getRegistry().register(new OheriumAxe());
+        event.getRegistry().register(new OheriumShovel());
+        event.getRegistry().register(new OheriumHoe());
     }
 }
